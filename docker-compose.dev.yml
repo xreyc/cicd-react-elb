@@ -5,7 +5,8 @@ services:
     container_name: app-dev
     image: app-dev
     build:
-      target: development
+      context: .
+      dockerfile: Dockerfile.development
     volumes:
       - ./src:/app/src
     ports:
