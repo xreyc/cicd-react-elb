@@ -15,7 +15,21 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "d-compose-dev": "docker-compose -f docker-compose.dev.yml up",
+    "d-compose-prod": "docker-compose up",
+    "d-build-dev": "docker-compose -f docker-compose.dev.yml build",
+    "d-build-prod": "docker-compose build",
+    "d-run-dev": "docker run -p 3000:3000 --name app-dev app-dev",
+    "d-run-prod": "docker run -p 80:80 --name app-prod app-prod",
+    "d-start-dev": "docker start app-dev",
+    "d-start-prod": "docker start app-prod",
+    "d-remove-dev-image": "docker image rm app-dev",
+    "d-remove-prod-image": "docker image rm app-prod",
+    "d-remove-dev-container": "docker container rm app-dev",
+    "d-remove-prod-container": "docker container rm app-prod",
+    "d-clear": "docker-compose down --rmi all -v",
+    "d-prune": "docker system prune -a"
   },
   "eslintConfig": {
     "extends": [
